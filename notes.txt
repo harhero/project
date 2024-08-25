@@ -336,4 +336,5 @@ Why use bcrypt ?
 
 [Widely Adopted: Bcrypt is a well-established and trusted algorithm used by many popular web frameworks and applications.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
