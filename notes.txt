@@ -1,0 +1,275 @@
+1)what is schema ?
+ => define the structure and contents of your data 
+
+2)what is Enum ?
+ => that represents a group of constants (unchangeable values)
+
+3)when to use Enums ?
+ => you have values that you know aren't going to change (like month days, days, color, deck of card, etc....)
+
+4)what is timestamps ?
+ => save the current time of the document created and also when it was updated in form of a Date by turning it true.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****Conditional Statements****
+
+ 1)if statement ?
+  => use (if) to specify a block of code to be executed, if a specified condition is (true).
+  note ---- that (if) is in lowercase letters. uppercase letters *(if or IF)* will generate a JavaScript error.
+
+ 2)else statement ?
+  => use (else) to specify a block of code to be executed, if the same condition is (false).
+
+ 3)else if statement ?
+  => use (else if) to specify a new condition to test, is the first same condition is (false).
+
+ 4)switch statement ?
+  => use (switch) to specify many alternative block of code to be executed.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)the default keyword ?
+  => the (default) keyword specifies the code to run if there is no case match.
+  note ---- if default is not the last case in the switch block, remember to end the default case with a break.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****async an await****
+
+ 1)what is async ?
+  => a utility module which provides straight froward, powerful functions for working with asynchronous JavaScript.
+
+ 2)what is await ?
+  => the await keyword can only be used inside an async function.
+  => the await keyword makes the function pause the execution and await for a resolved promise before it continues: 
+  => The await operator is used to wait for a (Promise) and get its fulfillment value. It can only be used inside an (async function) or at the top level of a (module).
+
+  => note {fulfillment value: Value in use is the present value of the cash flows that an entity expects to derive from the continuing use of an asset and from its ultimate disposal.}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)what is (req, res) ?
+ => req--(request object), res--(response object) purpose. represent the HTTP request made by the client.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****type:mongoose.Schema.Types.ObjectId,****
+
+ => in mongoose, (mongoose.objectId) is a schema type, which is a configuration object that defines a path is an schema.
+ => it doesn't actually create mongoDB objectId.
+ => a mongoose schema defines the structure and properties of a document in a mongoDB collection.
+ => it specifies expected properties and value, as well as constrains and indexes.
+ => a compiled version of the schema is called a model.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****findById****
+
+1)Mongoose findByIdAndUpdate ?
+ => The findByIdAndUpdate() function is used to find a matching document, update it according to the update arg, passing any options, and return the found document (if any) to the callback.
+
+2)mongoose fineByIdAndDelete ?
+ => the findByIdAndDelete() function is use to find a matching document, removes it, and passing the found document (if any) any to the callback.
+
+3) mongoose findById ?
+ => the findById() function is use to find a singal document by its _id field.
+ => the _id field is cast based on the schema before sending the command.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) what is runvalidators ?
+ => mongoose is a mongoDB object modeling and handling for a node.js environment.
+ => mongooes validation is essentially  a customizable middleware that gets defined inside the schematype of mongooes schema.
+ => it automatically fires off before a document is save in the NOSQlDB. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****FindOne method****
+
+1) what is FindOne() method ?
+ => the FindOne() is used when you want to retrieve a single document from a collection based on a specifi condition such as finding a user by their email or username.
+
+2) what is findOneAndDelete() method ?
+ => The findOneAndDelete() function is used to find a matching document, remove it, and passes the found document (if any) to the callback.
+
+3) what is findOneAndRemove() method ?
+ => The findOneAndRemove() function is used to find the element according to the condition and then remove the first matched element.
+
+4) what is FindOneAndReplace() ?
+ => The findOneAndReplace() function is used to find a matching element, replaces it with the provided element, and passes the returned doc to the callback.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**** JSON ****
+
+1)what is JSON ?
+  => JavaScript object notition (JSON) is satndard text based formet for representing structure data based JavaScript object syntax.
+  => JavaScript Object Notation, is a text-based data format that's commonly used by web developers to exchange data between a server and a web application.
+
+2)what is a lightwight data-interchange formet ?
+  => JavaScript Object Notation (JSON) is a lightweight data-interchange format.
+
+3)JSON is plain text written in JavaScript object notation ?
+  => a text-based data format that uses JavaScript object syntax to store and transmit data objects.
+
+4)json is uses to send data between computers ?
+  => JavaScript object notation (JSON) is a popular text-based data format that web developera use to send data between servers and web applications.
+  => It's a good choice for applications that need a simple and easy-to-use format.
+  => JSON is language-independent, which makes it ideal for exchanging data across different programming languages and platforms. 
+
+5)why use JSON ?
+  => the JSON formate is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
+  => Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.
+  
+  JavaScript has a built in function for converting JSON strings into JavaScript objects:
+  ---JSON.parse()
+
+  JavaScript also has a built in function for converting an object into a JSON string:
+  ---JSON.stringify()
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ****All Schematype****
+
+1)what is required ?
+ => boolean or function, if true adds a required vaildator for this property 
+ =>  the [required: true] option to specify that a field is required.
+
+2)what is default ?
+ => Any or function, sets a default value for the path. If the value is a function, the return value of the function is used as the default.
+ => JavaScript [default] parameters allow function arguments to be initialized with {default values if no value or undefined} is passed. 
+
+3)what is select ?
+ => boolean, specifies default (projections) for queries.
+ => select() is a method of Mongoose that is used to select document fields that are to be returned in the query result.
+
+4)what is validate ?
+ => function, adds a (validator function) for this property.
+ => datermines whether to warn  but accept invalid document, or error and reject invalid document.
+
+5)what is get ?
+ => function, defines a custom getter for this property using.
+    ****Object.defineProperty()****
+
+6)what is set ?
+ =>  function, defines a custom setter for this property using. 
+    ****Object.defineProperty()****
+
+7)what is alias ?
+ =>  string, mongoose >= 4.10.0 only. Defines a (virtual) with the given name that gets/sets this path.
+
+8) what is immutable ?
+ => immutable: boolean, defines path as immutable. Mongoose prevents you from changing immutable paths unless the parent document has (isNew: true).
+
+9) what is transform ?
+ => transform: function, Mongoose calls this function when you call (Document#toJSON()) function, including when you (JSON.stringify()) a document.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+****indexes****
+
+1) what is index ?
+ => boolean, whether to define an index on this property.
+ => Indexes are data structures that support the efficient execution of queries in MongoDB.
+
+2) what is unique ?
+ => boolean, whether to define a unique index on this property.
+ => indexes that help maintain data integrity by ensuring that no rows of data in a table have identical key values.
+
+3) what is sparse ?
+ => boolean, whether to define a (sparse index) on this property.
+ => only contain entries for documents that have the indexed field, even if the index field contains a null value.
+
+*****exmpale of indexes****
+
+const schema2 = new Schema({
+  test: {
+    type: String,
+    index: true,
+    unique: true // Unique index. If you specify `unique: true`
+    // specifying `index: true` is optional if you do `unique: true`
+  }
+});
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**** string ****
+
+1)what is lowercase ?
+ => boolean, whether to always call {.toLowerCase()} on the value.
+
+2)what is uppercase ?
+ => boolean, whether to always call {.toUpperCase()} on the value.
+
+3)what is trim ?
+ => boolean, whether to always call {.trim()} on the value.
+
+4)what is match ?
+ => RegExp, creates a validator that checks if the value matches the given regular expression.
+
+5)what is enum ? 
+ => Array, creates a validator that checks if the value is in the given array.
+
+6)what is minLength ?
+ => Number, creates a validator that checks if the value length is not less than the given number.
+
+7)what is maxLength ? 
+ => Number, creates a validator that checks if the value length is not greater than the given number.
+
+8)what is populate ?
+=> Populate in MongoDB simplifies data access and manipulation by automatically resolving references and populating the specified fields with the relevant documents.
+=> Object, sets default populate options. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+****Number****
+
+1) what is min ?
+ => Number, creates a validator that checks if the value is greater than or equal to the given minimum.
+
+2) what is max ?
+ =>  Number, creates a validator that checks if the value is less than or equal to the given maximum.
+
+3) what is enum ? 
+ => Array, creates a validator that checks if the value is strictly equal to one of the values in the given array.
+
+4) what is populate ? 
+ => Object, sets default populate options
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+****Date****
+
+1) what is min ? 
+ =>  Date, creates a validator that checks if the value is greater than or equal to the given minimum.
+
+2) what is max ? 
+ => Date, creates a validator that checks if the value is less than or equal to the given maximum.
+
+3) what is expires ? 
+ =>  Number or String, creates a TTL index with the value expressed in seconds.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**** object ****
+
+why should use it ?
+ => Objects are used to store data in a structured way.
+ => object can be use to create reusable data.
+ => object can be use to create complex data structure.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+****updateUser****
+
+1)Definition
+ => updateUser
+    :Updates the user's profile on the database on which you run the command. 
+     An update to a field completely replaces the previous field's values, including updates to the user's roles and authenticationRestrictions arrays.
+
+2)Tip
+ => In mongosh, this command can also be run through the db.changeUserPassword() helper method.
+ => Helper methods are convenient for mongosh users, but they may not return the same level of information as database commands. 
+    In cases where the convenience is not needed or the additional return fields are required, use the database command.
+
+3)Warning
+ => When you update the roles array, you completely replace the previous array's values. 
+    To add or remove roles without replacing all the user's existing roles, use the grantRolesToUser or revokeRolesFromUser commands.
+    
+4)type
+ => [string] The name of the user to update
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
