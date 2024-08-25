@@ -39,11 +39,11 @@ const MessageRouter = require ('./routes/MessageRoutes')
 app.use(express.json());
 
 // Define Routes
-app.Use('/api/',MessageRouter);
-app.Use('/api/',PaymentRoutes);
-app.Use('/api/',ReviewRoutes);
-app.Use('/api/',TaskRoutes);
-app.Use('/api/',UserRoutes);
+//app.Use('/api/',MessageRouter);
+//app.Use('/api/',PaymentRoutes);
+//app.Use('/api/',ReviewRoutes);
+//app.Use('/api/',TaskRoutes);
+//app.Use('/api/',UserRoutes);
 
 const PORT = process.env.PORT || 1212
 const HOST = "0.0.0.0";
